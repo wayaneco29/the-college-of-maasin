@@ -1,0 +1,251 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block body %}
+<div data-spy="scroll" data-target="#navbar-scroll" class="body">
+    <section id="banner">
+        <div class="container banner">
+            <div class="row">
+                <div class="col-md-7 color-white">
+                    <h1>A dynamic learning <br>Environment</h1>
+                    <p>
+                        There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="news">
+        <div class="container">
+            <div class="row p-4">
+                <div class="col-md-12 text-center news-header">
+                    <h1 data-aos="fade-up ">News & Events</h1>
+                </div>
+            </div>
+        {% for post in posts %}
+            <div class="row justify-content-md-center">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="shadow p-3 mb-5 bg-white rounded">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>{{ post.title}}</h5>
+                                <small>
+                                    {{ post.description }}
+                                </small>
+                            </div>
+                            <a href="{% url 'view' post.id %}" class="nav-link highlight-text"><small>See more.</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        {% endfor %}
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <a href="{% url 'view_more' %}" class="btn btn-lg highlight-box">View More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="programs">
+        <div class="container">
+            <div class="row p-5">
+                <div class="col-md-12 program-header">
+                    <h1 class="text-center" data-aos="zoom-in-down">Programs</h1>
+                </div>
+            </div>
+            <div class="row p-4">
+                <div class="col-md-6 col-sm-12" data-aos="fade-up-right">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                        </div>
+                        <div class="col-md-10 text-justify">
+                            <h6>BSIT</h6>
+                            <small>Prepares student to be IT professionals who are able to perform installation, operation, development, maintenance, and administration of computer applications..</small>
+                            <br>
+                            <small><a href="{% url 'bsit_homepage' %}" class="highlight-text">View More</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                        </div>
+                        <div class="col-md-10 text-justify">
+                            <h6>BSN</h6>
+                            <small>Includes the assessment of patient health problems, developing and implementing nursing care plans, and maintaining medical records. They also administer nursing care to the ill, injured, convalescent, or disabled patients</small>
+                            <br>
+                            <small><a href="{% url 'bsn_homepage' %}" class="highlight-text">View More</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-4">
+                <div class="col-md-6 col-sm-12" data-aos="fade-up-right">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                        </div>
+                        <div class="col-md-10 text-justify">
+                            <h6>LAED</h6>
+                            <small>Refers to college studies that provide general knowledge and develop intellectual ability. This type of education can prepare you for many fields in today's workplace.</small>
+                            <br>
+                            <small><a href="{% url 'laed_homepage' %}" class="highlight-text">View More</a></small>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-sm-12" data-aos="fade-up">
+                    <div class="row">
+                        <div class="col-md-2">
+                            <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                        </div>
+                        <div class="col-md-10 text-justify">
+                            <h6>FPST</h6>
+                            <small>Is a 2 years degree program which deals with the scientific preparation, processing and distribution of foods. It is also concerned with the improvement of food products’ flavor, appearance, storage qualities as well as in the control of quality changes during processing, marketing and distribution.</small>
+                            <br>
+                            <small><a href="{% url 'fpst_homepage' %}" class="highlight-text">View More</a></small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row p-4">
+                    <div class="col-md-6 col-sm-12" data-aos="fade-up-left">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                            </div>
+                            <div class="col-md-10 text-justify">
+                                <h6>BSBA</h6>
+                                <small>Degree program in General Management is a 120-credit program designed for students interested in having exposure to a number of business areas rather than focusing in depth on just one.</small>
+                                <br>
+                                <small><a href="#" class="highlight-text">View More</a></small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12" data-aos="fade-up-left">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <img src="{% static 'assets/program-icon.png' %}" width="50px">
+                            </div>
+                            <div class="col-md-10 text-justify">
+                                <h6>BSA</h6>
+                                <small>Is composed of subjects in accounting ( financial, public, managerial), audit, administration, business laws and taxation.</small>
+                                <br>
+                                <small><a href="{% url 'bsa_homepage' %}" class="highlight-text">View More</a></small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+    <section id="mission">
+        <div class="container p-5">
+            <div class="row justify-content-md-center p-4" style="margin-bottom: 20px">
+                <div class="col-md-8 text-center">
+                    <h1 class="color-white p-3">Mission</h1>
+                    <p class="color-white">
+                        The College of Maasin, with the integration of instruction, research and extension, commits itself in seeking a life of faith, learning and action to develop people into becoming God-loving citizens with integrity in character, intellectually performance, creatively aware and responsive to the needs and aspirations of people for the realization of a just, free and responsible Christian social order.
+                    </p>
+                    <h1 class="color-white p-3">Vision</h1>
+                    <p class="color-white">
+                        The College of Maasin as a dynamic learning institution that commits its life resources and ministry toward the development of persons. Nurtured by faith and by the liberating process of excellent learning toward wholistic and creative action for social renewal.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="motto">
+        <div class="container">
+            <div class="row p-5 justify-content-md-center">
+                <div class="col-md-8">
+                    <h1 class="text-center">Motto</h1>
+                    <p class="text-center">
+                        “Nisi Dominus Frustra” (Without God in Vain)
+                    </p>
+                    <p class="text-center">
+                        This motto is a solid affirmation of our dependence on God’s grace and mercy. So we respond in gratitude and trust in our abilities to become God’s stewards of creation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RESERVE FOR SMS NOTIFICATION -->
+    <!-- <section id="sms">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <p class="text-white p-5">Want to be updated on our announcements to your mobile number ?
+                        <a href="#" class="highlight-text">Register</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section> -->
+    <!-- <section id="faculty">
+        <div class="container">
+            <div class="row justify-content-md-center text-center">
+                <div class="col-md-12">
+                    <h1 class="p-3">Faculty and Staffs</h1>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <div class="col-md-3 text-center">
+                    <img src="{% static 'staffs/tiempo.jpg' %}" class="img-circle">
+                    <p class="staff-name">Rev. Jose L. Tiempo</p>
+                    <p><small>President</small></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/avergonzado.jpg' %}" class="img-circle">
+                    <p class="staff-name">AVERGONZADO</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/barrera.jpg' %}" class="img-circle">
+                    <p class="staff-name">BARRERA</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/edwina.jpg' %}" class="img-circle">
+                    <p class="staff-name">EDWINA</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/fajardo.jpg' %}" class="img-circle">
+                    <p class="staff-name">FAJARDO</p>
+                    <p><small>Positon</small></p>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/piao.jpg' %}" class="img-circle">
+                    <p class="staff-name">Piao</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/nino.jpg' %}" class="img-circle">
+                    <p class="staff-name">Nino</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/virginia.jpg' %}" class="img-circle">
+                    <p class="staff-name">Virginia</p>
+                    <p><small>Positon</small></p>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <img src="{% static 'staffs/cinco.jpg' %}" class="img-circle">
+                    <p class="staff-name">Cinco</p>
+                    <p><small>Positon</small></p>
+                </div>
+            </div>
+            <div class="row justify-content-md-center p-4">
+                <div class="col-md-4 text-center">
+                    <button class="btn btn-lg highlight-box">View More</button>
+                </div>
+            </div>
+        </div>
+    </section> -->
+</div>
+{% endblock body %}

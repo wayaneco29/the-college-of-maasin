@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% block nav %}
+{% endblock nav %}
+{% block body %}
+<div class="modal">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form method="POST">
+            {% csrf_token %}
+            <div class="modal-body">
+                <h5>Are you sure you want to delete post "{{ posts.title }}" ?</h5>
+            </div>
+            <div class="modal-footer">
+                    <a href="{% url 'post_list' %}" class="btn btn-outline-info"><i class="fas fa-times-circle"></i> Close</a>
+                    <button type="submit" class="btn btn-outline-danger"><i class="fas fa-trash-alt"></i> Delete</button>
+            </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock body %}
+{% block footer %}
+{% endblock footer %}

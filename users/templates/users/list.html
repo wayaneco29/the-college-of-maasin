@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block nav  %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+          <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'assets/cm-logo.jpg' %}" width="50px"> The College of Maasin</a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar1">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbar1">
+            <ul class="navbar-nav ml-auto">
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link color-black">
+                  HOME
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link color-black">
+                  NEWS & EVENTS
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{% url 'index' %}" class="nav-link color-black">
+                  PROGRAMS
+                </a>
+              </li>
+              
+              <div class="dropdown">
+                <button class="btn dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown">
+                  ABOUT
+                </button>
+                <div class="dropdown-menu">
+                  <a href="#" class="dropdown-item">FOUNDER</a>
+                  <a href="#" class="dropdown-item">ALMA MATTER SONG</a>
+                  <a href="#" class="dropdown-item">POLICY</a>
+                  <a href="#" class="dropdown-item">ACADEMICS</a>
+                  <a href="#" class="dropdown-item">PRIVILEGES</a>
+                  <a href="#" class="dropdown-item">CODE OF CONDUCT</a>
+                </div>
+              </div>
+            </ul>
+          </div>
+      </div>
+    </nav>
+{% endblock nav %}
+{% block body %}
+<div class="container p-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-12">
+            {% for post in posts %}
+            <div class="row justify-content-md-center">
+                <div class="col-md-6" data-aos="fade-right">
+                    <div class="shadow p-3 mb-5 bg-white rounded">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h5>{{ post.title}}</h5>
+                                <small>
+                                    {{ post.description }}
+                                </small>
+                                <br>
+                                <br>
+                                <small>{{ post.date_posted|date:"l, F Y" }}</small>
+                            </div>
+                            
+                            <a href="{% url 'view' post.id %}" class="nav-link highlight-text"><small>See more.</small></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock body %}

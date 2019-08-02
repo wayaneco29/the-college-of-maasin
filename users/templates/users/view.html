@@ -1,0 +1,27 @@
+{% extends 'base2.html' %}
+
+{% block body %}
+<div class="container p-5">
+    <div class="row justify-content-md-center">
+        <div class="col-md-8">
+            <div class="container">
+                <div class="row">
+                    <h4>{{ posts.title }}</h4>
+                    <br>
+                    <br>
+                    <br>
+                </div>
+                <div class="row">
+                    <p>{{ posts.content }}</p>
+                </div>
+                <div class="row">
+                    <br>
+                    <br>
+                    <p>Posted by: <b>{{ posts.author }}</b> at {{ posts.date_posted|date:"F j, Y" }}</p>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock body %}

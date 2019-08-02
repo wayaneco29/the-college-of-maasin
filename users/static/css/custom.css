@@ -1,0 +1,236 @@
+/* <!-- #######################################  STATIC NAVBAR ########################################### --> */
+nav.navbar.navbar-expand-lg.navbar-light.bg-light.sticky-top {
+    border-bottom: 3px solid green;
+}
+html {
+    overflow-x: hidden;
+}
+/* <!-- #######################################  BANNER ########################################### --> */
+/* #banner {
+    background-image: url('../assets/hero-background.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+} */
+#banner {
+    background-image: url('../assets/hero1.jpg');
+    height: 80vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#sms {
+    background-image: url('../assets/sms.png');
+    height: 50vh;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.banner {
+    transform: translate(0%, 57%);
+}
+/* <!-- #######################################  NEW AND EVENTS ########################################### --> */
+.news-header {
+    margin-top: 47px;
+}
+/* <!-- #######################################  PROGRAMS ########################################### --> */
+.program-header {
+    margin-top: 20px;
+}
+
+
+/* <!-- #######################################  STATIC CSS ########################################### --> */
+.highlight-text {
+    color: #F29C0B;
+}
+.highlight-text:hover, .highlight-text:focus {
+    color:green !important;
+    transition: all 0.5s;
+}
+a {
+    text-decoration: none !important;
+
+}
+.body {
+    position: relative;
+}
+.text-justify {
+    text-align: justify !important;
+}
+
+.highlight-box {
+    background: rgb(55, 161, 55);
+    color: white;
+}
+.highlight-box:hover {
+    background: green;
+    color: white !important;
+    transition: all 0.5s;
+}
+.color-white {
+    color: white;
+}
+.color-black {
+    color:black !important;
+}
+.color-green {
+    color: green !important;
+}
+
+/* <!-- #######################################  INDEX.HTML ########################################### --> */
+.img-circle {
+    border-radius: 49%;
+    margin-bottom:4px;
+    width: 150px;
+    height: 150px;
+    border: 1px solid green;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+
+.img-circle:hover, .img-circle:focus {
+    transform: scale(1.1)
+}
+p.staff-name {
+    font-weight: 500;
+    margin-bottom: 0;
+}
+/* <!-- #######################################  MISSION ########################################### --> */
+#mission {
+    background-image: url('../assets/missionVision-background.jpg');
+    height: 80vh;
+    background-attachment: fixed;
+}
+/* <!-- #######################################  FOOTER ########################################### --> */
+#footer {
+    background-color: #2E353F !important;
+}
+
+/* ADMIN */
+h1#name {
+    color: white;
+}
+div#header, input[type="submit"] {
+    background: green;
+}
+.container.custom-admin {
+    padding: 20px 10px;
+    background: green;
+}
+/* MODAL */
+.modal-content {
+    transform: translateY(70%);
+}
+
+/* ADMIN POST LIST TABLE */
+.table-margin {
+    margin-right: -60px !Important;
+}
+@media only screen and (max-width: 767px) {
+    .table-margin {
+        margin-right: -48px !Important;
+    }
+}
+@media only screen and (max-width: 450px) {
+    .table-margin {
+        margin-right: -20px !Important;
+    }
+}
+@media only screen and (max-width: 400px) {
+    .table-margin {
+        margin-right: -33px !Important;
+    }
+}
+@media only screen and (max-width: 350px) {
+    .table-margin {
+        margin-right: -33px !Important;
+    }
+}
+@media only screen and (max-width: 333px) {
+    .table-margin {
+        margin-right: -20px !Important;
+    }
+}
+/* #2E353F */
+
+/* BSIT BANNER */
+.bsit-banner {
+    background-image: url('../assets/bist-banner.jpg');
+    background-repeat: no-repeat;  
+    height: 80vh;
+    background-size: cover;
+}
+i.fas.fa-arrow-circle-left.fa-2x {
+    color: green;
+}
+i.footer-fa.fab.fa-facebook.fa-2x {
+    color: white;
+}
+p.navbar {
+    height: 30px;
+    margin-bottom: 0px;
+    background-color: green;
+}
+i.fas.fa-arrow-left.fa-2x {
+    color: white;
+}
+.col-md-12.controller {
+    transform: translate(15%, 132%);
+}
+.footer-item {
+    margin: 0;
+}
+.footer-item a {
+    color: white;
+}
+.freshmen-popup {
+    display: none;
+}
+
+table#example {
+    margin-bottom: 0px;
+}
+/* color: green!important;
+    font-weight: 500; */
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link:hover {
+    color: green!important;
+    transition: 0.4s ease;
+}
+.btn.focus, .btn:focus {
+    outline: 0;
+    box-shadow: none!important;
+}
+button#dropdown:hover {
+    color: green!important;
+}
+.dropdown-menu.show .dropdown-item:focus, .dropdown-item:hover {
+    color: white;
+    background: green;
+}
+
+/* FA FONT */
+
+.fa-2x {
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 25px !important;
+    transition: all 0.5s;
+    -webkit-transition: all 0.5s;
+}
+.footer-fa:hover, .footer-fa:focus {
+    transform: scale(1.5)
+}
+.sample {
+    background: green;
+    color: white;
+}
+@media only screen and (max-width:1199px) {
+    #mission {
+        height: 100vh !important;
+    }
+}
+@media only screen and (max-width: 991px) {
+    .container.p-5 {
+        padding: 1rem!important;
+    }
+}

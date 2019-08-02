@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load crispy_forms_tags %}
+
+{% block nav %}
+{% endblock nav %}
+{% block body %}
+    <div class="container">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10">
+                <h1>Add Post</h1>
+                <form method="POST">
+                    {% csrf_token %}
+                    {{ form|crispy }}
+                    <div class="form-group">
+                        <button class="btn btn-outline-success form-control" type="submit"><i class="fas fa-save"></i> SAVE/UPDATE</button>
+                    </div>
+                    {% if posts %}
+                    <div class="form-group">
+                        <a href="{% url 'delete_post' posts.id %}" class="form-control btn btn-outline-danger">
+                            <i class="fas fa-trash-alt"></i> Delete
+                        </a>
+                    </div>
+                    {% endif %}
+                </form>
+            </div>
+        </div>
+    </div>
+    {% comment %}
+    <div class="container p-5">
+        <div class="row justify-content-md-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <h4>List of Post:</h4>
+                                </div>
+                                <div class="ml-auto">
+                                    <button class="btn btn-info">
+                                        <a href="{% url 'add_post' %}" class="color-white"><i class="fas fa-plus"></i> Add Thread</a>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        {% comment %}
+                        {% for post in posts %}
+                            <div class="form-group">
+                                <a href="{% url 'update_post' post.id %}" class="form-control">
+                                {{ post.title }}
+                                <br>
+                                </a>
+                            </div>
+                        {% endfor %}
+                        {% endcomment %}
+                        <table class="table table-stripes">
+                            {% for post in posts %}
+                            <tr>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <td class="col-md-10">{{ post.title }}</td>
+                                        <td class="ml-0"><a href="{% url 'update_post' post.id %}" class="btn btn-outline-info">View</a></td>
+                                    </div>
+                                </div>
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+{% endblock body %}
+{% block footer %}
+{% endblock footer %}

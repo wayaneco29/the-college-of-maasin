@@ -1,0 +1,135 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- #######################################  STYLES ########################################### -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'plugins/fontawesome/css/all.css' %}">
+    <link rel="stylesheet" href="{% static 'aos-master/dist/aos.css' %}">
+    <title>
+      {% block title %}
+        The College of Maasin | Home
+      {% endblock title %}
+    </title>
+  </head>
+  <body>
+    <!-- #######################################  STATIC NAVBAR ########################################### -->
+    {% block nav %}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top">
+      <div class="container">
+        <a href="{% url 'index' %}" class="navbar-brand"><img src="{% static 'assets/cm-logo.png' %}" width="50px"> The College of Maasin</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbar1">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link color-black">
+                HOME
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link color-black">
+                NEWS & EVENTS
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{% url 'index' %}" class="nav-link color-black">
+                PROGRAMS
+              </a>
+            </li>
+            
+            <div class="dropdown">
+              <button class="btn dropdown-toggle" type="button" id="dropdown" data-toggle="dropdown">
+                ABOUT
+              </button>
+              <div class="dropdown-menu">
+                <a href="{% url 'founder' %}" class="dropdown-item">FOUNDER</a>
+                <a href="{% url 'song' %}" class="dropdown-item">ALMA MATTER SONG</a>
+              </div>
+            </div>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    {% endblock nav %}
+
+    <!-- #######################################  BODY ########################################### -->
+    {% block body %}
+      <!-- CONTENT -->
+    {% endblock body %}
+
+
+    <!-- #######################################  FOOTER ########################################### -->
+    {% block footer %}
+    <section id="footer" style="padding: 50px 0;">
+        <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-4">
+                          <img src="{% static 'assets/cm-logo.png' %}">
+                        </div>
+                        <div class="col-md-8 color-white">
+                          <h6>The College of Maasin</h6>
+                          <i class="fas fa-map-marker-alt fa-2x"></i>
+                          <p style="display: inline-block"> R. Kangleon Street, Maasin City, 6600 Southern Leyte</p>
+                          <h5>Follow us on:</h5>
+                          <i class="fab fa-instagram fa-2x"></i>
+                          <i class="fab fa-facebook fa-2x"></i>
+                          <i class="fab fa-twitter fa-2x"></i>
+                        </div>
+                      </div>
+                    </div>
+                <div class="col-md-4 color-white">
+                  <div class="footer-link">
+                    <p class="footer-item"><a href="{% url 'academics' %}">Academics</a></p>
+                    <p class="footer-item"><a href="{% url 'scholarship' %}">Scholarship</a></p>
+                    <p class="footer-item"><a href="{% url 'admission' %}">Admission Policy</a></p>
+                    <p class="footer-item"><a href="{% url 'codeofconduct' %}">Code of Conduct</a></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </section>
+    {% endblock footer %}
+
+
+    <!-- #######################################  SCRIPTS ########################################### -->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="{% static 'js/jquery.js' %}"></script>
+    <script src="{% static 'js/popper.js' %}"></script>
+    <script src="{% static 'js/bootstrap.js' %}"></script>
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="{% static 'aos-master/dist/aos.js' %}"></script>
+
+    <script>
+      AOS.init({
+        once: true
+      })
+    </script>
+    <!--Start of Tawk.to Script-->
+    <script type="text/javascript">
+    var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
+    (function(){
+    var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
+    s1.async=true;
+    s1.src='https://embed.tawk.to/5c46765aab5284048d0def8d/default';
+    s1.charset='UTF-8';
+    s1.setAttribute('crossorigin','*');
+    s0.parentNode.insertBefore(s1,s0);
+    })();
+    </script>
+  <!--End of Tawk.to Script-->
+  </body>  
+</html>

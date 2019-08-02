@@ -1,0 +1,732 @@
+{% extends 'base.html' %}
+{% block nav %}
+<p class="navbar">
+    <a href="{% url 'index' %}"><i class="fas fa-arrow-left fa-2x"></i><span></span></a>
+</p>
+{% endblock nav %}
+{% load static %}
+{% block body %}
+<!-- <section id="course-title">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12">
+                <p>Course Duration: <strong>4 years</strong></p>
+                <p>Admission Requirements:</p>
+                <a data-toggle="collapse" href="#multiCollapseExample1" class="freshmen">Freshmen</a> <small>|</small>
+                <a data-toggle="collapse" href="#multiCollapseExample2" class="transferee">Transferees</a>
+                <div class="col">
+                    <div class="collapse collapse-freshmen" id="multiCollapseExample1">
+                            <h4>Admission Requirements - Freshmen: </h4>
+                            <div class="container">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        1. Certificate of Transfer Credential / Honorable Dismissal
+                                        <br>
+                                        2. Certificate of Good Moral Character
+                                        <br>
+                                        3. Original Copy of Birth Certificate issued by the National Statistics Office (NSO)
+                                        <br>
+                                        4. Medical Certificate from The College of Maasin Accredited Physician
+                                    </div>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="collapse collapse-transferee" id="multiCollapseExample2">
+                        <h4>Admission Requirements - Transferees: </h4>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    1. Certificate of Transfer Credential / Honorable Dismissal
+                                    <br>
+                                    2. Transcript of Records / informative copy of grades with at least 2.5 GPA issued by the School Registrar
+                                    <br>
+                                    3. Certificate of Good Moral Character
+                                    <br>
+                                    4. Original Copy of Birth Certificate issued by the National Statistics Office (NSO)
+                                    <br>
+                                    5. Medical Certificate from The College of Maasin Accredited Physician
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
+<section id="perspectos">
+    <div class="container p-5">
+        <div class="row">
+            <div class="col-md-12">
+                <h2 class="text-center p-3">BSIT CURRICULUM</h2>
+                <h4 class="text-center p-4">First Year</h4>
+                <h6>First Semester</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CC101</td>
+                            <td>Introduction to Computing</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>CC102</td>
+                            <td>Computing Programming 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>HSS101*</td>
+                            <td>Hardware Systems and Servicing</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE1</td>
+                            <td>Understanding the Self</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE4</td>
+                            <td>Mathematics in the Modern World</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE5</td>
+                            <td>Purposive Communication</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Rel1+</td>
+                            <td>Old Testament</td>
+                            <td>(3)</td>
+                            <td>0</td>
+                            <td>(3)</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>PE1</td>
+                            <td>Self-Testing Activities/Physical Fitness</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>NSTP1</td>
+                            <td>National Service Training Program</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>23</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6>Second Semester</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CC103</td>
+                            <td>Computer Programming 2</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>CC102</td>
+                        </tr>
+                        <tr>
+                            <td>HCI101</td>
+                            <td>Introduction to Human Computer Interaction</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>CC101</td>
+                        </tr>
+                        <tr>
+                            <td>MS101</td>
+                            <td>Discrete Mathematics</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>Math1</td>
+                        </tr>
+                        <tr>
+                            <td>GE2</td>
+                            <td>Reading in Philippines History</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE9</td>
+                            <td>Life and Works of Rizal</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE(Elect1)</td>
+                            <td>Panitikang Filipino</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Rel2+</td>
+                            <td>The New Testament</td>
+                            <td>(3)</td>
+                            <td>0</td>
+                            <td>(3)</td>
+                            <td>Rel1</td>
+                        </tr>
+                        <tr>
+                            <td>PE2</td>
+                            <td>Fundamentals of Rhythmic Activities</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>PE1</td>
+                        </tr>
+                        <tr>
+                            <td>NSTP2</td>
+                            <td>National Service Training Program</td>
+                            <td>3</td>
+                            <td></td>
+                            <td>3</td>
+                            <td>NSTP1</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>23</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h4 class="text-center p-4">SECOND YEAR</h4>
+                <h6>First Semester</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th >COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CC104</td>
+                            <td>Data Structures and Algorithms</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC103</td>
+                        </tr>
+                        <tr>
+                            <td>PF101</td>
+                            <td>Object Oriented Programming</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC103</td>
+                        </tr>
+                        <tr>
+                            <td>PT101(ProfElec)</td>
+                            <td>Platform Technologies</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE3</td>
+                            <td>Contemporary World</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE6</td>
+                            <td>Art Appreciation</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE(Elec2)</td>
+                            <td>Panitikang Asyano</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>Rel3+</td>
+                            <td>Biblical Interpretation/Values</td>
+                            <td>(3)</td>
+                            <td>0</td>
+                            <td>(3)</td>
+                            <td>Rel2</td>
+                        </tr>
+                        <tr>
+                            <td>PE3</td>
+                            <td>Individual & Dual Sports</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>2</td>
+                            <td>PE2</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>20</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6>Second Semester</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CC105</td>
+                            <td>Information Management 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC104</td>
+                        </tr>
+                        <tr>
+                            <td>MS102</td>
+                            <td>Quantitative Methods</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>NET101</td>
+                            <td>Networking 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC101</td>
+                        </tr>
+                        <tr>
+                            <td>IPT101(ProfElec)</td>
+                            <td>Integrative Programming & Technologies</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC102</td>
+                        </tr>
+                        <tr>
+                            <td>GE7</td>
+                            <td>Science,Technology & Society</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE8</td>
+                            <td>Ethics</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>GE3(Elec3)</td>
+                            <td>Masining na Pagpapahayag</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>PE4</td>
+                            <td>Team Sports & Games</td>
+                            <td>2</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td>PE3</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>23</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <!-- 
+                    <h4 class="text-center p-4">SECOND YEAR</h4>
+                    <h6>First Semester</h6>
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>COURSE CODE</th>
+                                <th>DESCRIPTIVE TITLE</th>
+                                <th>LEC</th>
+                                <th>LAB</th>
+                                <th>UNITS</th>
+                                <th>PRE-REQUISET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                 -->
+                 <h4 class="text-center p-4">THIRD YEAR</h4>
+                 <h6>First Semester</h6>
+                 <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>IM101</td>
+                            <td>Advanced Database System 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC102</td>
+                        </tr>
+                        <tr>
+                            <td>NET102</td>
+                            <td>Networking 2</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>NET101</td>
+                        </tr>
+                        <tr>
+                            <td>SIA101</td>
+                            <td>System Integration and Architecture 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC104</td>
+
+                        </tr>
+                        <tr>
+                            <td>PF101(ProfElec)</td>
+                            <td>Event Driven Programming</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC102</td>
+
+                        </tr>
+                        <tr>
+                            <td>SAD101*</td>
+                            <td>Systems Analysis and Design</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+
+                        <tr>
+                            <td>WST101*</td>
+                            <td>Web Systems & Technologies</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td><b>Total Units</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>18</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6>Second Semester</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                    <thead>
+                        <tr>
+                            <th>COURSE CODE</th>
+                            <th>DESCRIPTIVE TITLE</th>
+                            <th>LEC</th>
+                            <th>LAB</th>
+                            <th>UNITS</th>
+                            <th>PRE-REQUISET</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>CC106</td>
+                            <td>Applications Development & Immerging Technologies</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>CC102</td>
+                        </tr>
+                        <tr>
+                            <td>IAS101</td>
+                            <td>Information Assurance and Security 1</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>SP101</td>
+                            <td>Social and Professional Issues</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>TP101*</td>
+                            <td>Technopreneurship</td>
+                            <td>3</td>
+                            <td>0</td>
+                            <td>3</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>MMS101*</td>
+                            <td>Multimedia Systems</td>
+                            <td>2</td>
+                            <td>1</td>
+                            <td>3</td>
+                            <td>WST101</td>
+                        </tr>
+                        <tr>
+                            <td><b>Total Units</b></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td><b>15</b></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <br>
+                <h6>SUMMER</h6>
+                <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>COURSE CODE</th>
+                                <th>DESCRIPTIVE TITLE</th>
+                                <th>LEC</th>
+                                <th>LAB</th>
+                                <th>UNITS</th>
+                                <th>PRE-REQUISET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>GIS101*</td>
+                                <td>Geographical Information System and Tour</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>SA101</td>
+                                <td>Systems Administration and Maintenance</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>CAP101</td>
+                                <td>Capstone Project1</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Total Units</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>9</b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    <h4 class="text-center p-4">FOURTH YEAR</h4>
+                    <h6>First Semester</h6>
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>COURSE CODE</th>
+                                <th>DESCRIPTIVE TITLE</th>
+                                <th>LEC</th>
+                                <th>LAB</th>
+                                <th>UNITS</th>
+                                <th>PRE-REQUISET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>IAS1012</td>
+                                <td>Information Assurance and Security2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>IAS101</td>
+                            </tr>
+                            <tr>
+                                <td>SIA102</td>
+                                <td>System Integration and Architecture2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>SIA101</td>
+                            </tr>
+                            <tr>
+                                <td>CAP102</td>
+                                <td>Capstone Project 2</td>
+                                <td>2</td>
+                                <td>1</td>
+                                <td>3</td>
+                                <td>CAP101</td>
+                            </tr>
+                            <tr>
+                                <td><b>Total Units</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>9</b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                    <h6>Second Semester</h6>
+                    <table id="example" class="table table-striped table-bordered" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>COURSE CODE</th>
+                                <th>DESCRIPTIVE TITLE</th>
+                                <th>LEC</th>
+                                <th>LAB</th>
+                                <th>UNITS</th>
+                                <th>PRE-REQUISET</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>PRAC101</td>
+                                <td>Practicum (486 hrs.)</td>
+                                <td></td>
+                                <td></td>
+                                <td>6</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td><b>Total Units</b></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td><b>6</b></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <br>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock body %}
